@@ -212,37 +212,37 @@ Raw CSV Data → SQL Cleaning & Feature Engineering → Processed CSVs → Power
 
 ### Page 2: Funnel & Drop-off Analysis
 <!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/funnel_chart.png" alt="Funnel Analysis" width="80%"/>
+<img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/ed0f5afe12c24157a9d60a4071ecf1a60cc57bf6/Funnel%20%26%20Drop-off%20Analysis.png/>
 > Deep dive into WHERE users drop off — waterfall chart, CVR by hour/day, weekday vs weekend comparison, funnel by top categories
 
 ### Page 3: Cart Abandonment Analysis ⭐
 <!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/cart_abandonment_chart.png" alt="Cart Abandonment" width="80%"/>
+<img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/ed0f5afe12c24157a9d60a4071ecf1a60cc57bf6/Cart%20Abandonment%20Analysis.png/>
 > Answering Q6 directly — abandonment by user segment, time, product, out-of-stock impact, and time-to-abandon distribution
 
 ### Page 4: Behavior Segmentation
 <!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/behavior_segment_map.png" alt="Behavior Segmentation" width="80%"/>
+<img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/ed0f5afe12c24157a9d60a4071ecf1a60cc57bf6/Behavior%20Segmentation.png/>
 > RFE-based user segments (Power Users → Inactive), behavioral labels (Repeat Buyer, Cart Abandoner, Window Shopper, Bounce User), segment vs CVR mapping
 
 ### Page 5: Product Performance Matrix
 <!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/behavior_segment_map.png" alt="Product Performance" width="80%"/>
+<img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/ed0f5afe12c24157a9d60a4071ecf1a60cc57bf6/Product%20Performance.png/>
 > 4-quadrant scatter plot (Stars / Traffic Wasters / Hidden Gems / Dead Products), Pareto analysis, out-of-stock impact, category-level breakdown
 
 ### Page 6: Cohort Retention
 <!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/cohort_heatmap.png" alt="Cohort Retention" width="80%"/>
+<img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/ed0f5afe12c24157a9d60a4071ecf1a60cc57bf6/Cohort%20Retention%20Analysis.png/>
 > Retention heatmap, cohort size trends, average retention curve, best & worst cohort identification
 
 ### Page 7: Statistical Results
 <!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/hypothesis_results.png" alt="Statistical Results" width="80%"/>
+<img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/ed0f5afe12c24157a9d60a4071ecf1a60cc57bf6/Statistical%20Results.png/>
 > Hypothesis test summary (5 tests with p-values), simulated A/B test results (5 experiments), confidence interval charts, winner badges
 
 ### Page 8: Time & Behavioral Patterns
 <!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/distribution_plots.png" alt="Time Patterns" width="80%"/>
+<img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/ed0f5afe12c24157a9d60a4071ecf1a60cc57bf6/Time%20%26%20Behavioral%20Patterns.png/>
 > Purchase heatmap (Hour × Day), daily event trends, weekend vs weekday comparison, peak hour KPIs, session depth vs CVR analysis
 
 <!-- 🔗 [View Live Dashboard](#) — *Coming soon* -->
