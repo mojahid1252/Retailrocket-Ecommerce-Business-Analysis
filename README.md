@@ -14,7 +14,7 @@
 ---
 
 <!-- 🖼️ HERO IMAGE — Replace with your most impressive dashboard screenshot -->
-<img src="exports/charts/insights_summary.png" alt="Dashboard Preview" width="90%"/>
+<img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/cf0b53f61cece9f0f77b20e07a5c7dd6bceb48c4/Executive%20Overview.png/>
 
 *Executive Overview Dashboard — Real-time conversion intelligence at a glance*
 
