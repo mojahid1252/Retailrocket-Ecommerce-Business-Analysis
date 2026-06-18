@@ -567,7 +567,7 @@ CROSS JOIN quartile_bounds q;
 > 🔍 **Finding 9:** Category engagement varies significantly (ANOVA, p < 0.001)
 > → **Impact:** Low-engagement categories need content/UX audits and visibility boost campaigns; high-engagement categories should receive more inventory investment
 
-> 🔍 **Finding 10:** Bounce users leave after just 1-2 events — landing page relevance is broken
+> 🔍 **Finding 10:** Bounce users leave after just 1-2 events - landing page relevance is broken
 > → **Impact:** Improving landing page relevance and first impression can reduce bounce rate, turning abandoned visits into browsing sessions
 
 ---
