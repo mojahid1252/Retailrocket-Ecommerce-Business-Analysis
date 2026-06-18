@@ -3,7 +3,7 @@
 # 🚀 E-Commerce Conversion Intelligence
 ### Behavioral Analysis & Funnel Optimization
 
-**Where users drop off, why they abandon, and what makes them buy — powered by SQL, Python & Power BI**
+**Where users drop off, why they abandon, and what makes them buy - powered by SQL, Python & Power BI**
 
 [![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)]()
 [![SQL](https://img.shields.io/badge/SQL-Analysis-4479A1?style=for-the-badge&logo=mysql&logoColor=white)]()
@@ -16,7 +16,7 @@
 <!-- 🖼️ HERO IMAGE — Replace with your most impressive dashboard screenshot -->
 <img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/cf0b53f61cece9f0f77b20e07a5c7dd6bceb48c4/Executive%20Overview.png/>
 
-*Executive Overview Dashboard — Real-time conversion intelligence at a glance*
+*Executive Overview Dashboard - Real-time conversion intelligence at a glance*
 
 </div>
 
@@ -24,15 +24,15 @@
 
 ## 📌 Project Overview
 
-This project delivers an **end-to-end behavioral analytics solution** for the Retail Rocket e-commerce platform, where **1.4 million visitors** generate over **2.75 million events** — yet **97%+ leave without purchasing**. Through systematic funnel analysis, behavioral segmentation, cart abandonment profiling, and rigorous statistical testing, this project uncovers the precise points of conversion failure and identifies high-impact, data-driven opportunities to improve purchase rates across the entire customer journey.
+This project delivers an **end-to-end behavioral analytics solution** for the Retail Rocket e-commerce platform, where **1.4 million visitors** generate over **2.75 million events** - yet **97%+ leave without purchasing**. Through systematic funnel analysis, behavioral segmentation, cart abandonment profiling, and rigorous statistical testing, this project uncovers the precise points of conversion failure and identifies high-impact, data-driven opportunities to improve purchase rates across the entire customer journey.
 
 ### 🎯 Business Problem
 
-Traffic is growing but conversion is **NOT** improving proportionally. **97%+ visitors leave without purchasing** and the cart abandonment rate hovers around **76%** — but the business has no visibility into **WHERE** users drop off, **WHY** they abandon carts, and **WHO** is most likely to convert. Without this intelligence, every marketing dollar and product recommendation is a shot in the dark.
+Traffic is growing but conversion is **NOT** improving proportionally. **97%+ visitors leave without purchasing** and the cart abandonment rate hovers around **76%** - but the business has no visibility into **WHERE** users drop off, **WHY** they abandon carts, and **WHO** is most likely to convert. Without this intelligence, every marketing dollar and product recommendation is a shot in the dark.
 
 ### 💡 Solution
 
-A **three-phase analytical pipeline** — SQL for data cleaning and core analysis, Python for advanced statistical testing, and Power BI for interactive visualization — that transforms raw behavioral event data into actionable conversion intelligence. Every insight is grounded in statistical significance (p-values), every segment is behaviorally defined (not assumed), and every recommendation is tied to a measurable conversion metric.
+A **three-phase analytical pipeline** - SQL for data cleaning and core analysis, Python for advanced statistical testing, and Power BI for interactive visualization - that transforms raw behavioral event data into actionable conversion intelligence. Every insight is grounded in statistical significance (p-values), every segment is behaviorally defined (not assumed), and every recommendation is tied to a measurable conversion metric.
 
 ### 📊 Key Results
 
@@ -130,8 +130,8 @@ retail-rocket-analytics/
 | File | Description |
 |------|-------------|
 | `events.csv` | User behavioral events (view, addtocart, transaction) |
-| `item_properties_1.csv` | Item attributes — category, availability, encoded price (Part 1) |
-| `item_properties_2.csv` | Item attributes — continued (Part 2) |
+| `item_properties_1.csv` | Item attributes - category, availability, encoded price (Part 1) |
+| `item_properties_2.csv` | Item attributes - continued (Part 2) |
 | `category_tree.csv` | Parent-child category hierarchy |
 
 ### Schema (events.csv)
@@ -142,7 +142,7 @@ retail-rocket-analytics/
 | `visitorid` | Integer | Unique user identifier |
 | `event` | String | `view` · `addtocart` · `transaction` |
 | `itemid` | Integer | Product identifier |
-| `transactionid` | Integer | Purchase ID (`NULL` for view/addtocart — valid, not missing) |
+| `transactionid` | Integer | Purchase ID (`NULL` for view/addtocart - valid, not missing) |
 
 ### Data Flow
 
@@ -152,16 +152,16 @@ Raw CSVs → SQL Cleaning (01_data_cleaning.sql) → clean_events.csv → All An
 
 ### ⚠️ Important Notes
 
-- **No real monetary values** — price column is encoded, not actual currency
+- **No real monetary values** - price column is encoded, not actual currency
 - **Conversion rate = primary success metric** throughout this project
-- **No user demographics** — age, location, device not available
-- **No product names** — only item IDs and category IDs
-- **A/B test groups don't exist** — simulated retrospectively for analytical demonstration
-- **NULL transactionid is valid** — view & addtocart events don't generate transaction IDs
+- **No user demographics** - age, location, device not available
+- **No product names** - only item IDs and category IDs
+- **A/B test groups don't exist** - simulated retrospectively for analytical demonstration
+- **NULL transactionid is valid** - view & addtocart events don't generate transaction IDs
 
 ### Why This Dataset?
 
-> This dataset is ideal for **conversion funnel analysis** because it captures the complete behavioral journey from product view → cart → purchase at real e-commerce scale. The absence of monetary data forces a focus on **behavioral signals and conversion metrics** — which is where most e-commerce analytics teams start before connecting revenue data.
+> This dataset is ideal for **conversion funnel analysis** because it captures the complete behavioral journey from product view → cart → purchase at real e-commerce scale. The absence of monetary data forces a focus on **behavioral signals and conversion metrics** - which is where most e-commerce analytics teams start before connecting revenue data.
 
 ---
 
@@ -182,7 +182,7 @@ Raw CSV Data → SQL Cleaning & Feature Engineering → Processed CSVs → Power
 
 ### Data Model
 
-**Flat schema with derived tables** — Each SQL analysis outputs a clean CSV that maps to a dedicated Power BI table. The `clean_events` table serves as the central fact table, with dimension tables for products, categories, and user segments created through SQL transformations.
+**Flat schema with derived tables** - Each SQL analysis outputs a clean CSV that maps to a dedicated Power BI table. The `clean_events` table serves as the central fact table, with dimension tables for products, categories, and user segments created through SQL transformations.
 
 ### Key Tables
 
@@ -208,17 +208,17 @@ Raw CSV Data → SQL Cleaning & Feature Engineering → Processed CSVs → Power
 ### Page 1: Executive Overview
 <!-- 🖼️ Replace with actual screenshot -->
 <img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/cf0b53f61cece9f0f77b20e07a5c7dd6bceb48c4/Executive%20Overview.png/>
-> One-page snapshot — Total Users (1.4M), Total Events (2.75M), CVR (2.14%), Cart Abandon Rate (76.8%), Conversion Funnel, Daily Trends, Event Breakdown, Top Categories
+> One-page snapshot - Total Users (1.4M), Total Events (2.75M), CVR (2.14%), Cart Abandon Rate (76.8%), Conversion Funnel, Daily Trends, Event Breakdown, Top Categories
 
 ### Page 2: Funnel & Drop-off Analysis
 <!-- 🖼️ Replace with actual screenshot -->
 <img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/ed0f5afe12c24157a9d60a4071ecf1a60cc57bf6/Funnel%20%26%20Drop-off%20Analysis.png/>
-> Deep dive into WHERE users drop off — waterfall chart, CVR by hour/day, weekday vs weekend comparison, funnel by top categories
+> Deep dive into WHERE users drop off - waterfall chart, CVR by hour/day, weekday vs weekend comparison, funnel by top categories
 
 ### Page 3: Cart Abandonment Analysis ⭐
 <!-- 🖼️ Replace with actual screenshot -->
 <img src=https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/ed0f5afe12c24157a9d60a4071ecf1a60cc57bf6/Cart%20Abandonment%20Analysis.png/>
-> Answering Q6 directly — abandonment by user segment, time, product, out-of-stock impact, and time-to-abandon distribution
+> Answering Q6 directly - abandonment by user segment, time, product, out-of-stock impact, and time-to-abandon distribution
 
 ### Page 4: Behavior Segmentation
 <!-- 🖼️ Replace with actual screenshot -->
@@ -259,14 +259,14 @@ Session CVR = Total Purchasing Sessions / Total Sessions
 
 | Why This Metric? | Reasoning |
 |-------------------|-----------|
-| **Session-level** (not user-level) | More granular & actionable — user-level CVR hides repeat visits |
+| **Session-level** (not user-level) | More granular & actionable - user-level CVR hides repeat visits |
 | **Reflects EACH visit opportunity** | Every session is a fresh conversion chance |
 | **Directly improvable** | Better recommendations, cart recovery, time-targeted promotions |
 | **Industry standard** | Session-based tracking is the e-commerce norm |
 
 **Supporting Metrics:** View-to-Cart Rate · Cart-to-Purchase Rate · Cart Abandonment Rate · Avg Events per Session
 
-**Anti-Metrics (NOT used):** Revenue · AOV · GMV — *not available in this dataset*
+**Anti-Metrics (NOT used):** Revenue · AOV · GMV - *not available in this dataset*
 
 ---
 
@@ -275,7 +275,7 @@ Session CVR = Total Purchasing Sessions / Total Sessions
 | Tool | Purpose | Details |
 |------|---------|---------|
 | **SQL** | Data Cleaning + Core Analysis | 10 query files covering funnel, segmentation, cohort, cart abandonment, category analysis |
-| **Python** | Advanced Statistics | 4 Jupyter notebooks — probability, distributions, hypothesis testing, simulated A/B testing |
+| **Python** | Advanced Statistics | 4 Jupyter notebooks - probability, distributions, hypothesis testing, simulated A/B testing |
 | **Power BI** | Interactive Dashboard | 8-page dashboard with KPI cards, funnel, heatmap, scatter matrix, cohort retention |
 | **DAX** | Calculated Measures | Session CVR, segment metrics, conditional formatting logic |
 | **Pandas / SciPy / Statsmodels** | Statistical Computing | t-tests, chi-square, z-tests, Mann-Whitney U, ANOVA, power analysis |
@@ -298,7 +298,7 @@ Session CVR = Total Purchasing Sessions / Total Sessions
 ### Analysis 2: Cart Abandonment Profiling ⭐
 **Business Question:** What is the cart abandonment rate and which users are most likely to abandon?
 **Method:** SQL analysis of all users who added to cart but never completed purchase, segmented by behavior (single vs multi-session, new vs returning), time (hour, day, weekend), product (most abandoned items/categories, out-of-stock items), and time-to-abandon distribution.
-**Finding:** ~76.8% cart abandonment rate. Single-session users and those who viewed fewer items before carting are most likely to abandon. Some unavailable items (available=0) are still being added to carts — a direct waste of purchase intent.
+**Finding:** ~76.8% cart abandonment rate. Single-session users and those who viewed fewer items before carting are most likely to abandon. Some unavailable items (available=0) are still being added to carts - a direct waste of purchase intent.
 **Business Impact:** Trigger cart recovery notifications within 1 hour of abandonment. Remove out-of-stock items from recommendations immediately. Add "Notify me when back in stock" for unavailable items currently receiving traffic.
 
 ---
@@ -314,7 +314,7 @@ Session CVR = Total Purchasing Sessions / Total Sessions
 ### Analysis 4: Product Performance Matrix
 **Business Question:** Which products get traffic but fail to convert?
 **Method:** 4-quadrant classification (Stars, Traffic Wasters, Hidden Gems, Dead Products) based on Views × CVR. Pareto analysis to check 80/20 distribution. Out-of-stock waste analysis.
-**Finding:** Hidden Gems exist — products with high CVR but critically low visibility. These convert at 2x the average rate when seen but receive almost zero traffic. Simultaneously, Traffic Wasters consume significant impressions but convert poorly. Out-of-stock items continue receiving views through recommendation slots.
+**Finding:** Hidden Gems exist - products with high CVR but critically low visibility. These convert at 2x the average rate when seen but receive almost zero traffic. Simultaneously, Traffic Wasters consume significant impressions but convert poorly. Out-of-stock items continue receiving views through recommendation slots.
 **Business Impact:** Feature Hidden Gems in "You Might Also Like" carousels. Audit Traffic Wasters for content/UX issues. Remove unavailable items from all recommendation slots to redirect wasted traffic.
 
 ---
@@ -339,7 +339,7 @@ Session CVR = Total Purchasing Sessions / Total Sessions
 **Business Question:** Are observed differences statistically significant or just noise?
 **Method:** Five rigorous hypothesis tests — Independent t-test (buyers vs non-buyers view count), Chi-Square (event type × time of day), Two-Proportion Z-Test (weekday vs weekend CVR), Mann-Whitney U (session depth vs conversion), One-Way ANOVA (category engagement differences).
 **Finding:** All five tests rejected the null hypothesis at p < 0.05. Buyers view significantly more items, purchase behavior depends on time of day, weekday/weekend CVR differs, deeper sessions convert more, and category engagement is not equal.
-**Business Impact:** Every key business recommendation in this project is backed by statistical evidence — not intuition. Time-targeted campaigns, session depth strategies, and category-level audits are all validated.
+**Business Impact:** Every key business recommendation in this project is backed by statistical evidence - not intuition. Time-targeted campaigns, session depth strategies, and category-level audits are all validated.
 
 ---
 
@@ -530,7 +530,7 @@ CROSS JOIN quartile_bounds q;
 | Light vs Heavy Viewers | Light | Heavy | **Dramatic** | < 0.05 | 🏆 Heavy Viewers |
 | Cart Abandoner Return | Never Returned | Returned Later | Higher | < 0.05 | 🏆 Returnees |
 
-> ⚠️ **Disclaimer:** These are simulated experiments using behavioral/time-based splits — not real randomized controlled experiments. This retrospective simulation approach is standard practice in e-commerce analytics when true randomized experiments are unavailable. No users were randomly assigned during original data collection.
+> ⚠️ **Disclaimer:** These are simulated experiments using behavioral/time-based splits - not real randomized controlled experiments. This retrospective simulation approach is standard practice in e-commerce analytics when true randomized experiments are unavailable. No users were randomly assigned during original data collection.
 
 ---
 
@@ -543,7 +543,7 @@ CROSS JOIN quartile_bounds q;
 > 🔍 **Finding 1:** 97%+ of visitors never purchase — the funnel is collapsing between View → Cart
 > → **Impact:** Improving product page engagement with "Related Products" carousel and social proof can push users past the 3-event threshold where conversion probability jumps significantly
 
-> 🔍 **Finding 2:** Cart abandonment rate is ~76.8% — 3 in 4 users who add to cart leave without buying
+> 🔍 **Finding 2:** Cart abandonment rate is ~76.8% - 3 in 4 users who add to cart leave without buying
 > → **Impact:** Triggering recovery notifications within 1 hour of abandonment can recover 5-8% of abandoned carts (industry benchmark), translating to ~1,750 additional purchases
 
 > 🔍 **Finding 3:** Evening users (6PM-12AM) convert significantly higher than morning users (p < 0.05)
@@ -619,11 +619,11 @@ CROSS JOIN quartile_bounds q;
 ## ⚠️ Data Limitations (Honest Disclosure)
 
 - **No real monetary values** in this dataset — all revenue projections are hypothetical
-- **Segmentation uses behavioral signals** (not traditional RFM) — engagement proxy, not monetary value
-- **A/B tests are simulated** (not real controlled experiments) — retrospective analysis, not randomized assignment
+- **Segmentation uses behavioral signals** (not traditional RFM) - engagement proxy, not monetary value
+- **A/B tests are simulated** (not real controlled experiments) - retrospective analysis, not randomized assignment
 - **Price column is encoded** — not real currency, no monetary analysis performed
-- **All value metrics = conversion-based proxy** — CVR is the primary success metric throughout
-- **Assumed AOV of $35 USD** for impact estimation — clearly labeled as assumption
+- **All value metrics = conversion-based proxy** - CVR is the primary success metric throughout
+- **Assumed AOV of $35 USD** for impact estimation - clearly labeled as assumption
 
 > This project values analytical integrity over inflated claims. Every limitation is disclosed upfront.
 
