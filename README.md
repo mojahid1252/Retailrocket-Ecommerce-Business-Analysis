@@ -742,6 +742,6 @@ This project includes **35+ engineered features** across 5 categories, created i
 
 ---
 
-*Built with ❤️ by [Your Name] | 2025*
+*Built with ❤️ by [Mozahid | 2025*
 
 </div>
