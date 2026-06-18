@@ -490,11 +490,11 @@ CROSS JOIN quartile_bounds q;
 
 | # | Notebook | Purpose | Key Analyses | Output |
 |---|----------|---------|-------------|--------|
-| 00 | `00_feature_engineering.ipynb` | Create 35+ engineered features used across all notebooks | Session-level features, user-level features, item-level features, time-based features, behavioral signal features | `features_master.csv` |
-| 01 | `01_probability_analysis.ipynb` | Basic, conditional, Bayes theorem, and joint probability analysis | P(Purchase), P(Purchase\|AddToCart), P(Purchase\|3+ Views), P(Abandon\|Cart), Bayes: P(Buyer\|Heavy Viewer), joint probabilities | `probability_results.csv` |
-| 02 | `02_distribution_analysis.ipynb` | Distribution fitting and outlier detection | Views per user distribution, Poisson test (hourly events), Normal test (session lengths), Power Law test (item popularity), Z-score & IQR outlier detection | `distribution_results.csv` |
-| 03 | `03_hypothesis_testing.ipynb` | 5 statistical hypothesis tests with H₀/H₁/conclusion | Independent t-test, Chi-Square, Two-Proportion Z-Test, Mann-Whitney U, One-Way ANOVA | `hypothesis_results.csv` |
-| 04 | `04_simulated_ab_testing.ipynb` | 5 simulated A/B tests with full statistical framework | Pre-test planning (baseline, MDE, sample size), 5 tests with z-test + CI, master summary table | `ab_test_results.csv` |
+| 00 | [`python/Ecommerce_EDA.ipynb`]() | Create 35+ engineered features used across all notebooks | Session-level features, user-level features, item-level features, time-based features, behavioral signal features | `features_master.csv` |
+| 01 | [`python/Ecommerce_EDA.ipynb`]() | Basic, conditional, Bayes theorem, and joint probability analysis | P(Purchase), P(Purchase\|AddToCart), P(Purchase\|3+ Views), P(Abandon\|Cart), Bayes: P(Buyer\|Heavy Viewer), joint probabilities | `probability_results.csv` |
+| 02 | [`python/Ecommerce_EDA.ipynb`]() | Distribution fitting and outlier detection | Views per user distribution, Poisson test (hourly events), Normal test (session lengths), Power Law test (item popularity), Z-score & IQR outlier detection | `distribution_results.csv` |
+| 03 | [`python/Ecommerce_EDA.ipynb`]() | 5 statistical hypothesis tests with H₀/H₁/conclusion | Independent t-test, Chi-Square, Two-Proportion Z-Test, Mann-Whitney U, One-Way ANOVA | `hypothesis_results.csv` |
+| 04 | [`python/Ecommerce_EDA.ipynb`]() | 5 simulated A/B tests with full statistical framework | Pre-test planning (baseline, MDE, sample size), 5 tests with z-test + CI, master summary table | `ab_test_results.csv` |
 
 ### Chart Outputs
 
