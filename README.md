@@ -498,18 +498,13 @@ CROSS JOIN quartile_bounds q;
 
 ### Chart Outputs
 
-> All charts are saved in the `exports/charts/` directory. These are the visual outputs from Python notebooks and Power BI exports.
+> All charts are saved in the Notebook uploaded above the Python file . These are the visual outputs from Python notebooks. For Seeing Just click the above files.
 
 | Chart | Source | Description |
 |-------|--------|-------------|
-| `funnel_chart.png` | SQL → Power BI | Conversion funnel visualization with drop-off rates at each stage |
-| `cart_abandonment_chart.png` | SQL → Power BI | Cart abandonment breakdown by segment, time, and product |
-| `behavior_segment_map.png` | SQL → Power BI | RFE segment distribution and behavioral label mapping |
-| `cohort_heatmap.png` | SQL → Power BI | Monthly cohort retention heatmap with color-coded retention % |
 | `distribution_plots.png` | Python Notebook 02 | Histograms with distribution overlays, Q-Q plots, box plots, log-scale plots |
 | `hypothesis_results.png` | Python Notebook 03 | Test summary table, p-value comparison, effect size visualization |
 | `ab_test_results.png` | Python Notebook 04 | CVR comparison bars, confidence interval plots, winner badges per test |
-| `insights_summary.png` | Power BI Export | Executive summary dashboard snapshot |
 
 ---
 
