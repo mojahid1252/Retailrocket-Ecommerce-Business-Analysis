@@ -469,7 +469,7 @@ CROSS JOIN quartile_bounds q;
 
 | # | File | Purpose | Key Output |
 |---|------|---------|------------|
-| 01 | `01_data_cleaning.sql` | Load raw CSVs, convert timestamps, remove duplicates, create session_id (30-min rule), merge item properties, build master clean_events table | `clean_events.csv` |
+| 01 | `Data Cleaning & Create Master Table.sql` | Load raw CSVs, convert timestamps, remove duplicates, create session_id (30-min rule), merge item properties, build master clean_events table | `clean_events.csv` |
 | 02 | `02_funnel_analysis.sql` | Overall funnel (Visitors → Viewers → Cart → Purchase), conversion rates, drop-off rates, funnel by category/hour/day, session-level funnel | `funnel_summary.csv` |
 | 03 | `03_conversion_metrics.sql` | Overall CVR, view-to-cart rate, cart-to-purchase rate, segment-level CVR (hour, day, category, weekday/weekend, single vs multi-session), purchase probability | `conversion_metrics.csv` |
 | 04 | `04_cart_abandonment.sql` | Overall abandonment rate, abandonment by user behavior (single/multi, new/returning), by time, by product, out-of-stock in cart, time-to-abandon, abandoner profile | `cart_abandonment.csv` |
@@ -479,24 +479,6 @@ CROSS JOIN quartile_bounds q;
 | 08 | `08_time_series_analysis.sql` | Daily/weekly/hourly patterns, peak hours, weekday vs weekend CVR, month-over-month change, anomaly flags | `time_series_data.csv` |
 | 09 | `09_category_analysis.sql` | Category tree hierarchy, per-category metrics, top/bottom 10 by CVR, cross-category browsing patterns | `category_analysis.csv` |
 | 10 | `10_ab_test_data_prep.sql` | 5 simulated A/B test group assignments (Morning/Evening, Single/Multi, Weekday/Weekend, Light/Heavy, Abandoner Return) | `simulated_ab_groups.csv` |
-
-### SQL File Header Standard
-
-Every SQL file includes this header for data consistency:
-
-```sql
--- ============================================================
--- E-Commerce Conversion Intelligence: Behavioral Analysis
--- ============================================================
--- File       : XX_analysis_name.sql
--- Purpose    : [What this file does]
--- Input      : clean_events.csv
--- Output     : output_file.csv
--- Note       : Price column exists but is encoded — NOT real
---              currency values. No monetary analysis will be
---              performed. Conversion rate = primary metric.
--- ============================================================
-```
 
 ---
 
