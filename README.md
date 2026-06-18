@@ -702,7 +702,8 @@ I build end-to-end analytics solutions that turn raw operational data into execu
 
 ## 🤝 Let's Work Together
 
-Are you a financial services business looking to:
+
+"Are you an e-commerce business looking to identify conversion leaks, optimize product placement, and increase revenue without spending more on ads?"
 
 → **Democratize data access** across product, risk, and marketing teams?
 → **Identify revenue concentration risks** before they become problems?
