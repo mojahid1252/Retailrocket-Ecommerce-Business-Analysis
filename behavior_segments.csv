@@ -1,0 +1,11 @@
+summary_type,segment_name,behavioral_label,user_count,user_pct,avg_events,avg_sessions,avg_purchases,avg_rfe_score,segment_cvr
+rfe_segment,Power User,,154306,10.96,3.15,1.41,0.07,13.45,4.22
+rfe_segment,Loyal Browser,,494078,35.10,2.42,1.38,0.02,10.89,1.05
+rfe_segment,Occasional User,,465420,33.07,1.66,1.22,0.00,8.06,0.00
+rfe_segment,Fading User,,257775,18.31,1.03,1.01,0.00,5.24,0.00
+rfe_segment,Inactive,,36001,2.56,1.00,1.00,0.00,3.00,0.00
+behavioral_label,Bounce User,Bounce User,1353670,96.17,1.52,,0.00,,0.00
+behavioral_label,Cart Abandoner,Cart Abandoner,27146,1.93,7.02,,0.00,,0.00
+behavioral_label,Window Shopper,Window Shopper,15045,1.07,18.76,,0.00,,0.00
+behavioral_label,One-time Buyer,One-time Buyer,9143,0.65,8.16,,1.00,,100.00
+behavioral_label,Repeat Buyer,Repeat Buyer,2576,0.18,60.55,,5.17,,100.00
