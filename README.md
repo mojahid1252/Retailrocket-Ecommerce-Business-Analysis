@@ -461,6 +461,75 @@ CROSS JOIN quartile_bounds q;
 > **Why this matters:** The Hidden Gems quadrant is the most actionable discovery — these products convert well but are invisible to the algorithm. Promoting them is a low-risk, high-reward strategy.
 
 ---
+---
+
+## 📜 SQL Files — Complete Breakdown
+
+> All SQL files are located in the `sql/` directory. Run them **in order** (01 → 10) for correct dependency flow.
+
+| # | File | Purpose | Key Output |
+|---|------|---------|------------|
+| 01 | `01_data_cleaning.sql` | Load raw CSVs, convert timestamps, remove duplicates, create session_id (30-min rule), merge item properties, build master clean_events table | `clean_events.csv` |
+| 02 | `02_funnel_analysis.sql` | Overall funnel (Visitors → Viewers → Cart → Purchase), conversion rates, drop-off rates, funnel by category/hour/day, session-level funnel | `funnel_summary.csv` |
+| 03 | `03_conversion_metrics.sql` | Overall CVR, view-to-cart rate, cart-to-purchase rate, segment-level CVR (hour, day, category, weekday/weekend, single vs multi-session), purchase probability | `conversion_metrics.csv` |
+| 04 | `04_cart_abandonment.sql` | Overall abandonment rate, abandonment by user behavior (single/multi, new/returning), by time, by product, out-of-stock in cart, time-to-abandon, abandoner profile | `cart_abandonment.csv` |
+| 05 | `05_behavior_segmentation.sql` | RFE scoring (Recency, Frequency, Engagement using NTILE(5)), 5 segments (Power Users → Inactive), behavioral labels (Repeat Buyer, Cart Abandoner, Window Shopper, Bounce User) | `behavior_segments.csv` |
+| 06 | `06_product_analysis.sql` | Per-item metrics, 4-quadrant classification (Stars / Traffic Wasters / Hidden Gems / Dead), Pareto analysis, out-of-stock waste, category-level summary | `product_performance.csv` |
+| 07 | `07_cohort_analysis.sql` | Monthly cohort definition, retention matrix (Month 0 → N), purchase cohort, repeat purchase rate, best/worst cohort | `cohort_retention.csv` |
+| 08 | `08_time_series_analysis.sql` | Daily/weekly/hourly patterns, peak hours, weekday vs weekend CVR, month-over-month change, anomaly flags | `time_series_data.csv` |
+| 09 | `09_category_analysis.sql` | Category tree hierarchy, per-category metrics, top/bottom 10 by CVR, cross-category browsing patterns | `category_analysis.csv` |
+| 10 | `10_ab_test_data_prep.sql` | 5 simulated A/B test group assignments (Morning/Evening, Single/Multi, Weekday/Weekend, Light/Heavy, Abandoner Return) | `simulated_ab_groups.csv` |
+
+### SQL File Header Standard
+
+Every SQL file includes this header for data consistency:
+
+```sql
+-- ============================================================
+-- E-Commerce Conversion Intelligence: Behavioral Analysis
+-- ============================================================
+-- File       : XX_analysis_name.sql
+-- Purpose    : [What this file does]
+-- Input      : clean_events.csv
+-- Output     : output_file.csv
+-- Note       : Price column exists but is encoded — NOT real
+--              currency values. No monetary analysis will be
+--              performed. Conversion rate = primary metric.
+-- ============================================================
+```
+
+---
+
+## 🐍 Python Notebooks & Chart Outputs
+
+> All notebooks are in the `python/` directory. Run `00_feature_engineering.ipynb` **FIRST** before any other notebook.
+
+### Notebooks
+
+| # | Notebook | Purpose | Key Analyses | Output |
+|---|----------|---------|-------------|--------|
+| 00 | `00_feature_engineering.ipynb` | Create 35+ engineered features used across all notebooks | Session-level features, user-level features, item-level features, time-based features, behavioral signal features | `features_master.csv` |
+| 01 | `01_probability_analysis.ipynb` | Basic, conditional, Bayes theorem, and joint probability analysis | P(Purchase), P(Purchase\|AddToCart), P(Purchase\|3+ Views), P(Abandon\|Cart), Bayes: P(Buyer\|Heavy Viewer), joint probabilities | `probability_results.csv` |
+| 02 | `02_distribution_analysis.ipynb` | Distribution fitting and outlier detection | Views per user distribution, Poisson test (hourly events), Normal test (session lengths), Power Law test (item popularity), Z-score & IQR outlier detection | `distribution_results.csv` |
+| 03 | `03_hypothesis_testing.ipynb` | 5 statistical hypothesis tests with H₀/H₁/conclusion | Independent t-test, Chi-Square, Two-Proportion Z-Test, Mann-Whitney U, One-Way ANOVA | `hypothesis_results.csv` |
+| 04 | `04_simulated_ab_testing.ipynb` | 5 simulated A/B tests with full statistical framework | Pre-test planning (baseline, MDE, sample size), 5 tests with z-test + CI, master summary table | `ab_test_results.csv` |
+
+### Chart Outputs
+
+> All charts are saved in the `exports/charts/` directory. These are the visual outputs from Python notebooks and Power BI exports.
+
+| Chart | Source | Description |
+|-------|--------|-------------|
+| `funnel_chart.png` | SQL → Power BI | Conversion funnel visualization with drop-off rates at each stage |
+| `cart_abandonment_chart.png` | SQL → Power BI | Cart abandonment breakdown by segment, time, and product |
+| `behavior_segment_map.png` | SQL → Power BI | RFE segment distribution and behavioral label mapping |
+| `cohort_heatmap.png` | SQL → Power BI | Monthly cohort retention heatmap with color-coded retention % |
+| `distribution_plots.png` | Python Notebook 02 | Histograms with distribution overlays, Q-Q plots, box plots, log-scale plots |
+| `hypothesis_results.png` | Python Notebook 03 | Test summary table, p-value comparison, effect size visualization |
+| `ab_test_results.png` | Python Notebook 04 | CVR comparison bars, confidence interval plots, winner badges per test |
+| `insights_summary.png` | Power BI Export | Executive summary dashboard snapshot |
+
+---
 
 ## 🔬 Python Statistical Analysis
 
