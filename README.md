@@ -45,87 +45,6 @@ A **three-phase analytical pipeline** — SQL for data cleaning and core analysi
 | Hidden Gem Products | **High CVR, zero traffic** | Untapped conversion potential |
 | Out-of-Stock Waste | **Significant traffic on unavailable items** | Wasted sessions draining CVR |
 
----
-
-## 🖥️ Dashboard Preview
-
-### Page 1: Executive Overview
-<!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/insights_summary.png" alt="Executive Overview" width="80%"/>
-> One-page snapshot — Total Users (1.4M), Total Events (2.75M), CVR (2.14%), Cart Abandon Rate (76.8%), Conversion Funnel, Daily Trends, Event Breakdown, Top Categories
-
-### Page 2: Funnel & Drop-off Analysis
-<!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/funnel_chart.png" alt="Funnel Analysis" width="80%"/>
-> Deep dive into WHERE users drop off — waterfall chart, CVR by hour/day, weekday vs weekend comparison, funnel by top categories
-
-### Page 3: Cart Abandonment Analysis ⭐
-<!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/cart_abandonment_chart.png" alt="Cart Abandonment" width="80%"/>
-> Answering Q6 directly — abandonment by user segment, time, product, out-of-stock impact, and time-to-abandon distribution
-
-### Page 4: Behavior Segmentation
-<!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/behavior_segment_map.png" alt="Behavior Segmentation" width="80%"/>
-> RFE-based user segments (Power Users → Inactive), behavioral labels (Repeat Buyer, Cart Abandoner, Window Shopper, Bounce User), segment vs CVR mapping
-
-### Page 5: Product Performance Matrix
-<!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/behavior_segment_map.png" alt="Product Performance" width="80%"/>
-> 4-quadrant scatter plot (Stars / Traffic Wasters / Hidden Gems / Dead Products), Pareto analysis, out-of-stock impact, category-level breakdown
-
-### Page 6: Cohort Retention
-<!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/cohort_heatmap.png" alt="Cohort Retention" width="80%"/>
-> Retention heatmap, cohort size trends, average retention curve, best & worst cohort identification
-
-### Page 7: Statistical Results
-<!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/hypothesis_results.png" alt="Statistical Results" width="80%"/>
-> Hypothesis test summary (5 tests with p-values), simulated A/B test results (5 experiments), confidence interval charts, winner badges
-
-### Page 8: Time & Behavioral Patterns
-<!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/distribution_plots.png" alt="Time Patterns" width="80%"/>
-> Purchase heatmap (Hour × Day), daily event trends, weekend vs weekday comparison, peak hour KPIs, session depth vs CVR analysis
-
-<!-- 🔗 [View Live Dashboard](#) — *Coming soon* -->
-
----
-
-## ⭐ North Star Metric
-
-**Purchase Conversion Rate per Session**
-
-```
-Session CVR = Total Purchasing Sessions / Total Sessions
-```
-
-| Why This Metric? | Reasoning |
-|-------------------|-----------|
-| **Session-level** (not user-level) | More granular & actionable — user-level CVR hides repeat visits |
-| **Reflects EACH visit opportunity** | Every session is a fresh conversion chance |
-| **Directly improvable** | Better recommendations, cart recovery, time-targeted promotions |
-| **Industry standard** | Session-based tracking is the e-commerce norm |
-
-**Supporting Metrics:** View-to-Cart Rate · Cart-to-Purchase Rate · Cart Abandonment Rate · Avg Events per Session
-
-**Anti-Metrics (NOT used):** Revenue · AOV · GMV — *not available in this dataset*
-
----
-
-## 🛠️ Tech Stack
-
-| Tool | Purpose | Details |
-|------|---------|---------|
-| **SQL** | Data Cleaning + Core Analysis | 10 query files covering funnel, segmentation, cohort, cart abandonment, category analysis |
-| **Python** | Advanced Statistics | 4 Jupyter notebooks — probability, distributions, hypothesis testing, simulated A/B testing |
-| **Power BI** | Interactive Dashboard | 8-page dashboard with KPI cards, funnel, heatmap, scatter matrix, cohort retention |
-| **DAX** | Calculated Measures | Session CVR, segment metrics, conditional formatting logic |
-| **Pandas / SciPy / Statsmodels** | Statistical Computing | t-tests, chi-square, z-tests, Mann-Whitney U, ANOVA, power analysis |
-
----
-
 ## 📦 Dataset
 
 **Source:** [Kaggle — Retail Rocket E-Commerce Dataset](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
@@ -215,6 +134,89 @@ Raw CSV Data → SQL Cleaning & Feature Engineering → Processed CSVs → Power
 | `time_series_data` | Varies | date, event_type, count, rolling_7day, is_anomaly | Temporal patterns + anomaly flags |
 | `simulated_ab_groups` | Varies | test_name, group_label, total_users, total_conversions, conversion_rate | A/B test group statistics |
 | `features_master` | 1.4M | 35+ engineered features (session, user, item, time, behavioral) | Master feature set for all notebooks |
+
+
+---
+
+## 🖥️ Dashboard Preview
+
+### Page 1: Executive Overview
+<!-- 🖼️ Replace with actual screenshot -->
+<img src="exports/charts/insights_summary.png" alt="Executive Overview" width="80%"/>
+> One-page snapshot — Total Users (1.4M), Total Events (2.75M), CVR (2.14%), Cart Abandon Rate (76.8%), Conversion Funnel, Daily Trends, Event Breakdown, Top Categories
+
+### Page 2: Funnel & Drop-off Analysis
+<!-- 🖼️ Replace with actual screenshot -->
+<img src="exports/charts/funnel_chart.png" alt="Funnel Analysis" width="80%"/>
+> Deep dive into WHERE users drop off — waterfall chart, CVR by hour/day, weekday vs weekend comparison, funnel by top categories
+
+### Page 3: Cart Abandonment Analysis ⭐
+<!-- 🖼️ Replace with actual screenshot -->
+<img src="exports/charts/cart_abandonment_chart.png" alt="Cart Abandonment" width="80%"/>
+> Answering Q6 directly — abandonment by user segment, time, product, out-of-stock impact, and time-to-abandon distribution
+
+### Page 4: Behavior Segmentation
+<!-- 🖼️ Replace with actual screenshot -->
+<img src="exports/charts/behavior_segment_map.png" alt="Behavior Segmentation" width="80%"/>
+> RFE-based user segments (Power Users → Inactive), behavioral labels (Repeat Buyer, Cart Abandoner, Window Shopper, Bounce User), segment vs CVR mapping
+
+### Page 5: Product Performance Matrix
+<!-- 🖼️ Replace with actual screenshot -->
+<img src="exports/charts/behavior_segment_map.png" alt="Product Performance" width="80%"/>
+> 4-quadrant scatter plot (Stars / Traffic Wasters / Hidden Gems / Dead Products), Pareto analysis, out-of-stock impact, category-level breakdown
+
+### Page 6: Cohort Retention
+<!-- 🖼️ Replace with actual screenshot -->
+<img src="exports/charts/cohort_heatmap.png" alt="Cohort Retention" width="80%"/>
+> Retention heatmap, cohort size trends, average retention curve, best & worst cohort identification
+
+### Page 7: Statistical Results
+<!-- 🖼️ Replace with actual screenshot -->
+<img src="exports/charts/hypothesis_results.png" alt="Statistical Results" width="80%"/>
+> Hypothesis test summary (5 tests with p-values), simulated A/B test results (5 experiments), confidence interval charts, winner badges
+
+### Page 8: Time & Behavioral Patterns
+<!-- 🖼️ Replace with actual screenshot -->
+<img src="exports/charts/distribution_plots.png" alt="Time Patterns" width="80%"/>
+> Purchase heatmap (Hour × Day), daily event trends, weekend vs weekday comparison, peak hour KPIs, session depth vs CVR analysis
+
+<!-- 🔗 [View Live Dashboard](#) — *Coming soon* -->
+
+---
+
+## ⭐ North Star Metric
+
+**Purchase Conversion Rate per Session**
+
+```
+Session CVR = Total Purchasing Sessions / Total Sessions
+```
+
+| Why This Metric? | Reasoning |
+|-------------------|-----------|
+| **Session-level** (not user-level) | More granular & actionable — user-level CVR hides repeat visits |
+| **Reflects EACH visit opportunity** | Every session is a fresh conversion chance |
+| **Directly improvable** | Better recommendations, cart recovery, time-targeted promotions |
+| **Industry standard** | Session-based tracking is the e-commerce norm |
+
+**Supporting Metrics:** View-to-Cart Rate · Cart-to-Purchase Rate · Cart Abandonment Rate · Avg Events per Session
+
+**Anti-Metrics (NOT used):** Revenue · AOV · GMV — *not available in this dataset*
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose | Details |
+|------|---------|---------|
+| **SQL** | Data Cleaning + Core Analysis | 10 query files covering funnel, segmentation, cohort, cart abandonment, category analysis |
+| **Python** | Advanced Statistics | 4 Jupyter notebooks — probability, distributions, hypothesis testing, simulated A/B testing |
+| **Power BI** | Interactive Dashboard | 8-page dashboard with KPI cards, funnel, heatmap, scatter matrix, cohort retention |
+| **DAX** | Calculated Measures | Session CVR, segment metrics, conditional formatting logic |
+| **Pandas / SciPy / Statsmodels** | Statistical Computing | t-tests, chi-square, z-tests, Mann-Whitney U, ANOVA, power analysis |
+
+---
+
 
 ---
 
