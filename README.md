@@ -469,7 +469,7 @@ CROSS JOIN quartile_bounds q;
 
 | # | File | Purpose | Key Output |
 |---|------|---------|------------|
-| 01 | `https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/9955876082f4c88cd28fb6ccf32e1d314a7d34a9/Data%20Cleaning%20%26%20Create%20Master%20Table.sql` | Load raw CSVs, convert timestamps, remove duplicates, create session_id (30-min rule), merge item properties, build master clean_events table | `clean_events.csv` |
+| 01 | [`sql/ecommerce_analysis_postgres.sql`](https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/52c559648eb3bfa198ef5bc16d0ccd6492c7be31/Data%20Cleaning%20%26%20Create%20Master%20Table.sql)| Load raw CSVs, convert timestamps, remove duplicates, create session_id (30-min rule), merge item properties, build master clean_events table | `clean_events.csv` |
 | 02 | `02_funnel_analysis.sql` | Overall funnel (Visitors → Viewers → Cart → Purchase), conversion rates, drop-off rates, funnel by category/hour/day, session-level funnel | `funnel_summary.csv` |
 | 03 | `03_conversion_metrics.sql` | Overall CVR, view-to-cart rate, cart-to-purchase rate, segment-level CVR (hour, day, category, weekday/weekend, single vs multi-session), purchase probability | `conversion_metrics.csv` |
 | 04 | `04_cart_abandonment.sql` | Overall abandonment rate, abandonment by user behavior (single/multi, new/returning), by time, by product, out-of-stock in cart, time-to-abandon, abandoner profile | `cart_abandonment.csv` |
@@ -619,6 +619,7 @@ CROSS JOIN quartile_bounds q;
 | **Combined Estimated Impact** | | **~+1.0% CVR** ✅ |
 
 ---
+
 
 ## ⚠️ Data Limitations (Honest Disclosure)
 
