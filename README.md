@@ -684,36 +684,37 @@ Page 6: Cohort Retention — How well users return
 Page 7: Statistical Results — What's statistically proven
 Page 8: Time & Behavioral Patterns — When conversion peaks
 ```
-
 ---
 
 ## 👨‍💻 About The Analyst
 
-**Data Analyst** | E-Commerce Analytics Specialist
+**[Mozahidul Islam]**
+Data Analyst | E-Commerce Analytics & BI Specialist
 
-I transform raw behavioral data into conversion intelligence that businesses can act on. This project demonstrates my ability to own the full analytics pipeline — from SQL data engineering through statistical validation to executive-ready dashboards.
+I build end-to-end analytics solutions that turn raw operational data into executive-grade dashboards - SQL data warehousing, Power BI semantic modeling, DAX measures, and the business storytelling that ties it all together.
 
-📧 **Email:** [your-email@example.com](mailto:your-email@example.com)
-💼 **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-🌐 **Portfolio:** [your-portfolio.com](https://your-portfolio.com)
-📊 **Fiverr:** [fiverr.com/your-profile](https://fiverr.com/your-profile)
+- 📧 **Email:** [mojahidulislam101010@gmail.com]
+- 💼 **LinkedIn:** [https://www.linkedin.com/in/mozahidul-islam-453662380/]
+- 🌐 **Portfolio:** 
+- 📊 **Fiverr / Upwork:** 
 
 ---
 
 ## 🤝 Let's Work Together
 
-Are you an e-commerce business looking to:
+Are you a financial services business looking to:
 
-→ Understand your sales performance and conversion bottlenecks?
-→ Identify which user segments are worth investing in?
-→ Make data-driven decisions backed by statistical evidence?
-→ Optimize your funnel and reduce cart abandonment?
+→ **Democratize data access** across product, risk, and marketing teams?
+→ **Identify revenue concentration risks** before they become problems?
+→ **Segment customers** for targeted acquisition and retention?
+→ **Make data-driven decisions** instead of gut-driven ones?
 
 **I can help. Let's talk.**
 
-[📩 Contact Me](mailto:your-email@example.com)
+[📩 Contact Me](mailto:mojahidulislam101010@gmail.com) · [📅 Book a Call](https://calendly.com/my-link)
 
 ---
+
 
 ## ⚙️ Feature Engineering Overview
 
