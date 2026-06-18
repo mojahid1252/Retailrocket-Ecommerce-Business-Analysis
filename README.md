@@ -207,7 +207,7 @@ Raw CSV Data → SQL Cleaning & Feature Engineering → Processed CSVs → Power
 
 ### Page 1: Executive Overview
 <!-- 🖼️ Replace with actual screenshot -->
-<img src="exports/charts/insights_summary.png" alt="Executive Overview" width="80%"/>
+<img https://github.com/mojahid1252/Retailrocket-Ecommerce-Business-Analysis/blob/cf0b53f61cece9f0f77b20e07a5c7dd6bceb48c4/Executive%20Overview.png/>
 > One-page snapshot — Total Users (1.4M), Total Events (2.75M), CVR (2.14%), Cart Abandon Rate (76.8%), Conversion Funnel, Daily Trends, Event Breakdown, Top Categories
 
 ### Page 2: Funnel & Drop-off Analysis
