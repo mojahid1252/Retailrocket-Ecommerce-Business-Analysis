@@ -46,6 +46,38 @@ A **three-phase analytical pipeline** — SQL for data cleaning and core analysi
 | Out-of-Stock Waste | **Significant traffic on unavailable items** | Wasted sessions draining CVR |
 
 ---
+---
+
+📦 Dataset: Retail Rocket E-Commerce Behavioral Data
+Source: Kaggle — Retail Rocket E-Commerce Dataset
+
+What's Inside?
+File
+Records
+Description
+events.csv	2,756,101	User behavioral events — view, addtocart, transaction
+item_properties_1.csv	—	Item attributes (category, availability, encoded price) Part 1
+item_properties_2.csv	—	Item attributes Part 2
+category_tree.csv	~1,600	Parent-child category hierarchy
+
+Key Columns (events.csv)
+Column
+Type
+Description
+timestamp	Unix epoch	Event time (converted to datetime in SQL)
+visitorid	Integer	Unique user identifier (1,407,580 unique visitors)
+event	String	Event type: view, addtocart, transaction
+itemid	Integer	Product identifier
+transactionid	Integer	Purchase ID (NULL for view/addtocart — this is valid, not missing)
+
+What Makes This Dataset Special?
+1.4M+ visitors, 2.75M+ events — real e-commerce scale
+3 event types only — clean funnel: View → AddToCart → Transaction
+No monetary values — price column exists but is encoded, not real currency
+Conversion rate is the primary metric — no revenue, AOV, or GMV analysis possible
+Behavioral signals only — engagement depth, session patterns, and time-based behaviors are the analytical proxies for user value
+---
+
 
 ## 🖥️ Dashboard Preview
 
