@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🚀 E-Commerce Conversion Intelligence
-### Behavioral Analysis & Funnel Optimization
+###  End-to-end analytics project on 2M+ real e-commerce data
 
 **Where users drop off, why they abandon, and what makes them buy - powered by SQL, Python & Power BI**
 
