@@ -1,0 +1,6 @@
+test_number,test_name,business_question,h0,p_value,significant,verdict
+1,Independent T-Test,Do buyers view more items than non-buyers?,Equal avg views,1.1515497721697307e-160,True,Reject H0
+2,Chi-Square Test,Is purchase behavior independent of time?,Event type independent of time,8.766729319138575e-178,True,Reject H0
+3,Two-Proportion Z-Test,Is weekday CVR different from weekend CVR?,CVR_weekday = CVR_weekend,1.1512297020019808e-67,True,Reject H0
+4,Mann-Whitney U Test,Do deeper sessions lead to more conversion?,Session depth does not affect CVR,0.0,True,Reject H0
+5,One-Way ANOVA,Do all categories have equal engagement?,All categories equal engagement,0.0,True,Reject H0

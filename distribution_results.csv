@@ -1,0 +1,13 @@
+metric,value
+mean_views_per_user,1.8927648872533
+median_views_per_user,1.0
+mean_sessions_per_user,1.2515629662257208
+median_sessions_per_user,1.0
+mean_events_per_session,1.5642164417386861
+median_events_per_session,1.0
+poisson_lambda,832.0172101449275
+poisson_ks_pvalue,0.0
+shapiro_pvalue,1.4699127506242344e-86
+top_20pct_items_view_share,19.366170486048816
+zscore_outlier_count,2122.0
+iqr_outlier_count,113451.0
