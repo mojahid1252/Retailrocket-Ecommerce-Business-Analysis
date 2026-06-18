@@ -45,6 +45,71 @@ A **three-phase analytical pipeline** — SQL for data cleaning and core analysi
 | Hidden Gem Products | **High CVR, zero traffic** | Untapped conversion potential |
 | Out-of-Stock Waste | **Significant traffic on unavailable items** | Wasted sessions draining CVR |
 
+## 📁 Repository Structure
+
+```
+retail-rocket-analytics/
+│
+├── 📁 data/
+│   ├── 📁 raw/
+│   │   ├── events.csv                    # 2.75M behavioral events
+│   │   ├── item_properties_1.csv         # Item attributes part 1
+│   │   ├── item_properties_2.csv         # Item attributes part 2
+│   │   └── category_tree.csv             # Category hierarchy
+│   │
+│   └── 📁 processed/
+│       ├── clean_events.csv              # Master cleaned events table
+│       ├── funnel_summary.csv            # Funnel stage metrics
+│       ├── conversion_metrics.csv        # Overall + segment CVR
+│       ├── cart_abandonment.csv          # Cart abandonment profiling
+│       ├── behavior_segments.csv         # RFE segments + behavioral labels
+│       ├── product_performance.csv       # Product metrics + quadrant classification
+│       ├── cohort_retention.csv          # Retention matrix data
+│       ├── category_analysis.csv         # Category-level performance
+│       ├── time_series_data.csv          # Temporal patterns + anomaly flags
+│       ├── hypothesis_test_data.csv      # Statistical test inputs
+│       ├── simulated_ab_groups.csv       # A/B test group statistics
+│       └── features_master.csv           # 35+ engineered features
+│
+├── 📁 sql/
+│   ├── 01_data_cleaning.sql              # Load, clean, session creation
+│   ├── 02_funnel_analysis.sql            # Conversion funnel + drop-off rates
+│   ├── 03_conversion_metrics.sql         # Overall + segment-level CVR
+│   ├── 04_cart_abandonment.sql           # Cart abandonment deep dive
+│   ├── 05_behavior_segmentation.sql      # RFE scoring + behavioral labels
+│   ├── 06_product_analysis.sql           # Product performance + quadrants
+│   ├── 07_cohort_analysis.sql            # Retention heatmap data
+│   ├── 08_time_series_analysis.sql       # Daily/hourly/weekly patterns
+│   ├── 09_category_analysis.sql          # Category tree + performance
+│   └── 10_ab_test_data_prep.sql          # Simulated A/B group creation
+│
+├── 📁 python/
+│   ├── 00_feature_engineering.ipynb      # 35+ features (session/user/item/time/behavioral)
+│   ├── 01_probability_analysis.ipynb     # Basic, conditional, Bayes, joint probability
+│   ├── 02_distribution_analysis.ipynb    # Distribution fitting + outlier detection
+│   ├── 03_hypothesis_testing.ipynb       # 5 tests with H₀/H₁/conclusion
+│   └── 04_simulated_ab_testing.ipynb     # 5 simulated A/B tests + power analysis
+│
+├── 📁 powerbi/
+│   └── retail_rocket_dashboard.pbix      # 8-page interactive dashboard
+│
+├── 📁 exports/
+│   ├── 📁 charts/
+│   │   ├── funnel_chart.png
+│   │   ├── cart_abandonment_chart.png
+│   │   ├── behavior_segment_map.png
+│   │   ├── cohort_heatmap.png
+│   │   ├── distribution_plots.png
+│   │   ├── hypothesis_results.png
+│   │   ├── ab_test_results.png
+│   │   └── insights_summary.png
+│   │
+│   └── 📁 reports/
+│       └── final_business_report.pdf
+│
+└── 📄 README.md
+```
+
 ## 📦 Dataset
 
 **Source:** [Kaggle — Retail Rocket E-Commerce Dataset](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
@@ -423,70 +488,7 @@ CROSS JOIN quartile_bounds q;
 
 ---
 
-## 📁 Repository Structure
 
-```
-retail-rocket-analytics/
-│
-├── 📁 data/
-│   ├── 📁 raw/
-│   │   ├── events.csv                    # 2.75M behavioral events
-│   │   ├── item_properties_1.csv         # Item attributes part 1
-│   │   ├── item_properties_2.csv         # Item attributes part 2
-│   │   └── category_tree.csv             # Category hierarchy
-│   │
-│   └── 📁 processed/
-│       ├── clean_events.csv              # Master cleaned events table
-│       ├── funnel_summary.csv            # Funnel stage metrics
-│       ├── conversion_metrics.csv        # Overall + segment CVR
-│       ├── cart_abandonment.csv          # Cart abandonment profiling
-│       ├── behavior_segments.csv         # RFE segments + behavioral labels
-│       ├── product_performance.csv       # Product metrics + quadrant classification
-│       ├── cohort_retention.csv          # Retention matrix data
-│       ├── category_analysis.csv         # Category-level performance
-│       ├── time_series_data.csv          # Temporal patterns + anomaly flags
-│       ├── hypothesis_test_data.csv      # Statistical test inputs
-│       ├── simulated_ab_groups.csv       # A/B test group statistics
-│       └── features_master.csv           # 35+ engineered features
-│
-├── 📁 sql/
-│   ├── 01_data_cleaning.sql              # Load, clean, session creation
-│   ├── 02_funnel_analysis.sql            # Conversion funnel + drop-off rates
-│   ├── 03_conversion_metrics.sql         # Overall + segment-level CVR
-│   ├── 04_cart_abandonment.sql           # Cart abandonment deep dive
-│   ├── 05_behavior_segmentation.sql      # RFE scoring + behavioral labels
-│   ├── 06_product_analysis.sql           # Product performance + quadrants
-│   ├── 07_cohort_analysis.sql            # Retention heatmap data
-│   ├── 08_time_series_analysis.sql       # Daily/hourly/weekly patterns
-│   ├── 09_category_analysis.sql          # Category tree + performance
-│   └── 10_ab_test_data_prep.sql          # Simulated A/B group creation
-│
-├── 📁 python/
-│   ├── 00_feature_engineering.ipynb      # 35+ features (session/user/item/time/behavioral)
-│   ├── 01_probability_analysis.ipynb     # Basic, conditional, Bayes, joint probability
-│   ├── 02_distribution_analysis.ipynb    # Distribution fitting + outlier detection
-│   ├── 03_hypothesis_testing.ipynb       # 5 tests with H₀/H₁/conclusion
-│   └── 04_simulated_ab_testing.ipynb     # 5 simulated A/B tests + power analysis
-│
-├── 📁 powerbi/
-│   └── retail_rocket_dashboard.pbix      # 8-page interactive dashboard
-│
-├── 📁 exports/
-│   ├── 📁 charts/
-│   │   ├── funnel_chart.png
-│   │   ├── cart_abandonment_chart.png
-│   │   ├── behavior_segment_map.png
-│   │   ├── cohort_heatmap.png
-│   │   ├── distribution_plots.png
-│   │   ├── hypothesis_results.png
-│   │   ├── ab_test_results.png
-│   │   └── insights_summary.png
-│   │
-│   └── 📁 reports/
-│       └── final_business_report.pdf
-│
-└── 📄 README.md
-```
 
 ---
 
